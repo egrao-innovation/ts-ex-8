@@ -1,13 +1,13 @@
 import { Tournament } from './tournament'
 
 describe('Tournament', () => {
-  it('just the header if no input', () => {
+  xit('just the header if no input', () => {
     expect(new Tournament().tally('')).toBe(
       'Team                           | MP |  W |  D |  L |  P'
     )
   })
 
-  it('a win is three points, a loss is zero points', () => {
+  xit('a win is three points, a loss is zero points', () => {
     expect(
       new Tournament().tally('Allegoric Alaskans;Blithering Badgers;win')
     ).toBe(
@@ -19,7 +19,7 @@ describe('Tournament', () => {
     )
   })
 
-  it('a win can also be expressed as a loss', () => {
+  xit('a win can also be expressed as a loss', () => {
     expect(
       new Tournament().tally('Blithering Badgers;Allegoric Alaskans;loss')
     ).toBe(
@@ -31,7 +31,7 @@ describe('Tournament', () => {
     )
   })
 
-  it('a different team can win', () => {
+  xit('a different team can win', () => {
     expect(
       new Tournament().tally('Blithering Badgers;Allegoric Alaskans;win')
     ).toBe(
@@ -43,7 +43,7 @@ describe('Tournament', () => {
     )
   })
 
-  it('a draw is one point each', () => {
+  xit('a draw is one point each', () => {
     expect(
       new Tournament().tally('Allegoric Alaskans;Blithering Badgers;draw')
     ).toBe(
@@ -55,7 +55,7 @@ describe('Tournament', () => {
     )
   })
 
-  it('There can be more than one match', () => {
+  xit('There can be more than one match', () => {
     expect(
       new Tournament().tally(
         [
@@ -72,7 +72,7 @@ describe('Tournament', () => {
     )
   })
 
-  it('There can be more than one winner', () => {
+  xit('There can be more than one winner', () => {
     expect(
       new Tournament().tally(
         [
@@ -89,7 +89,7 @@ describe('Tournament', () => {
     )
   })
 
-  it('There can be more than two teams', () => {
+  xit('There can be more than two teams', () => {
     expect(
       new Tournament().tally(
         [
@@ -108,7 +108,7 @@ describe('Tournament', () => {
     )
   })
 
-  it('typical input', () => {
+  xit('typical input', () => {
     expect(
       new Tournament().tally(
         [
@@ -131,7 +131,7 @@ describe('Tournament', () => {
     )
   })
 
-  it('incomplete competition (not all pairs have played)', () => {
+  xit('incomplete competition (not all pairs have played)', () => {
     expect(
       new Tournament().tally(
         [
@@ -152,7 +152,7 @@ describe('Tournament', () => {
     )
   })
 
-  it('ties broken alphabetically', () => {
+  xit('ties broken alphabetically', () => {
     expect(
       new Tournament().tally(
         [
